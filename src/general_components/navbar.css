@@ -1,0 +1,141 @@
+#nav{
+display: flex;
+justify-content: space-between;
+height: 70px;
+align-items: center;
+}
+
+#div_img{
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.div_link{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#blog{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#projects{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#contact{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#blog:hover{
+    animation-name: underline;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+#projects:hover{
+    animation-name: underline;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+#contact:hover{
+    animation-name: underline;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+#handy_menu{
+    display: none;
+}
+
+#hamburgerm{
+    display: none;
+    margin-right: 0px;
+}
+
+label.hamburg { 
+    display: block;
+    background: rgba(85, 85, 85, 0); width: 75px; height: 50px; 
+    position: relative; 
+    margin-left: auto; margin-right: auto;
+    border-radius: 4px; 
+ }
+ 
+ input#hamburg {display:none}
+
+ .line { 
+    position: absolute; 
+    left:10px;
+    height: 4px; width: 45px; 
+    background: #fff; border-radius: 2px;
+    display: block; 
+    transition: 0.5s; 
+    transform-origin: center; 
+ }
+ 
+ .line:nth-child(1) { top: 12px; }
+ .line:nth-child(2) { top: 24px; }
+ .line:nth-child(3) { top: 36px; }
+ 
+ #hamburg:checked + .hamburg .line:nth-child(1){
+    transform: translateY(12px) rotate(-45deg);
+ }
+ 
+ #hamburg:checked + .hamburg .line:nth-child(2){
+    opacity:0;
+ }
+ 
+ #hamburg:checked + .hamburg .line:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+ }
+
+
+
+
+
+@keyframes underline{
+    0% {text-decoration: none;}
+    100% {text-decoration: underline;}
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    #div_img {
+     padding-left: 10px; 
+    }
+    #hamburgerm{
+        display: block;
+    }
+    #blog, #projects, #contact{
+        display: none;
+    }
+
+    #handy_menu{
+        display: none;
+        position: absolute;
+        background-color: chocolate;
+        width: 100vw;
+        top: 70px;
+        height: calc(100vh - 70px);
+    }
+
+    #blog2, #projects2, #contact2{
+        text-decoration: none;
+        color: black;
+    }
+  }
