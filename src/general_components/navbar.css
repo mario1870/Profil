@@ -3,6 +3,9 @@ display: flex;
 justify-content: space-between;
 height: 70px;
 align-items: center;
+position: fixed;
+width: 100vw;
+z-index: 10;
 }
 
 #div_img{
@@ -127,15 +130,27 @@ label.hamburg {
 
     #handy_menu{
         display: none;
-        position: absolute;
-        background-color: chocolate;
+        position: fixed;
+        background-color: #d2691e;
         width: 100vw;
         top: 70px;
         height: calc(100vh - 70px);
+        z-index: 5;
     }
 
     #blog2, #projects2, #contact2{
         text-decoration: none;
         color: black;
+        height: 33.3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    #blog2, #contact2{
+        background-color: #a0ecff42;
+    }
+    #projects2{
+        background-color: #d78c57;
     }
   }

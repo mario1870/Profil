@@ -4,7 +4,9 @@
 
 const Ausbildung = (props) => {
     return (
-        <p>{props.text}</p>
+        <div>
+            <p>{props.text}</p>
+        </div>
     )
 }
 

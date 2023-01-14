@@ -34,7 +34,7 @@ const Navbarr = () => {
           
           <div className="row" id='hamburgerm'>
             <input type="checkbox" id="hamburg" onChange={(e) => {setHamburger(e.target.checked ? 1 : 0)}} />
-            <label for="hamburg" className="hamburg">
+            <label htmlFor="hamburg" className="hamburg">
                 <span className="line"></span>
                 <span className="line"></span>
                 <span className="line"></span>
@@ -42,7 +42,7 @@ const Navbarr = () => {
         </div>
 
         <div id='handy_menu'>
-          <span style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection:"column"}}>
+          <span style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection:"column", height:"100%"}}>
             <Link id="blog2" to="/blog"><div className='div_link'>Blog</div></Link>
             <Link id="projects2" to="/projects" ><div className='div_link'>Projekte</div></Link>
             <Link id="contact2" to="/contact" ><div className='div_link'>Kontakt</div></Link>
