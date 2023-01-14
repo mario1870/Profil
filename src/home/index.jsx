@@ -12,7 +12,7 @@ const Home = () => {
             <Navbarr />
             <p>LEL</p>
             <Face_image />
-            <Welcome_text text="Willkommen LEL" />
+            <Welcome_text text="Willkommen LELoo" />
             <Footer />
         </>
     )
