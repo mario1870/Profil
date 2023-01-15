@@ -1,0 +1,31 @@
+#skills{
+    display: flex;
+    flex-direction: row;
+}
+
+#softskills{
+    background-color: antiquewhite;
+    width: 50vw;
+}
+
+#hardskills{
+    background-color: rgb(255, 201, 129);
+    width: 50vw;
+}
+
+@media only screen and (max-width: 576px) {
+    #skills{
+        flex-direction: column;
+        height: calc(100vh - 70px);
+    }
+    #softskills{
+        background-color: rgb(255, 201, 129);
+        height: calc((100vh - 70px) / 2);
+        width: 100vw;
+    }
+    #hardskills{
+        background-color: rgb(230, 18, 18);
+        width: 100vw;
+        height:calc((100vh - 70px) / 2);
+    }
+  }
