@@ -1,10 +1,13 @@
-
+import "./schule.css"
 
 
 
 const Schule = (props) => {
     return (
-        <p>{props.text}</p>
+        <div>
+            <img src="icon_schule.png" id="icon"  />
+            <p>{props.text}</p>
+        </div>
     )
 }
 
