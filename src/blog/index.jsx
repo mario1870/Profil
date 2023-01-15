@@ -1,7 +1,9 @@
+import Ethical_Hacking from "./Ethical_Hacking/index.jsx"
+
 const Blog = () => {
     return(
         <div id="contact">
-            <h1>LELLS</h1>
+            <Ethical_Hacking />
         </div>
     )
 }

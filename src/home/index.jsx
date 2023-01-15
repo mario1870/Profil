@@ -12,8 +12,11 @@ import Skills from "./skills"
 
 
 const Home = () => {
+
+
     return(
         <>
+
         <Navbarr />
         <div id="page">
             <div id="landing">
@@ -25,7 +28,10 @@ const Home = () => {
                 </div>
             </div>
 
+
+
             <div id="cv">
+
                 <div id="ausbildung">
                     <Ausbildung text="Ausbildung" />
                 </div>

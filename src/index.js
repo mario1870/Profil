@@ -3,13 +3,30 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbarr from './general_components/navbar';
+import Home from './home';
+import Blog from "./blog"
+import Contact from './contact';
+import Projects from './projects';
+import Ethical_hacking from './blog/Ethical_Hacking';
+import Ki from './blog/ki';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
 
-    <App />
+          <Route index element={<Home />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="blog/ki" element={<Ki />} />
+          <Route path="blog/eh" element={<Ethical_hacking />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

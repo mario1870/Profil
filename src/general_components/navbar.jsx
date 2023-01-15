@@ -19,10 +19,10 @@ const Navbarr = () => {
     
 
     return(
-      <Router>
+
         <nav className='bg-primary' id='nav'>
           <span id='span_img'>
-            <Link to="/"><div id='div_img' style={{height: "70px"}}><img src='logo.png' style={{height: "40px"}} /></div></Link>
+            <Link to="/"><div id='div_img' style={{height: "70px"}}><img src="https://i.postimg.cc/j54DC1XR/logo.png" style={{height: "40px"}} /></div></Link>
           </span>
 
           <span style={{display: "flex", justifyContent: "center", alignItems: "center", paddingRight: "30px"}}>
@@ -50,7 +50,7 @@ const Navbarr = () => {
         </div>
 
         </nav>
-      </Router>
+
     )
 }
 

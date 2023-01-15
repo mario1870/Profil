@@ -1,0 +1,13 @@
+#rahmen{
+    display: flex;
+    justify-content: center;
+}
+
+#contact_field{
+    width: 65%;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

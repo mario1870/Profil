@@ -6,6 +6,8 @@ align-items: center;
 position: fixed;
 width: 100vw;
 z-index: 10;
+top: 0;
+left: 0;
 }
 
 #div_img{

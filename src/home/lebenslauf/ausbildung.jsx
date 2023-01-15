@@ -10,7 +10,7 @@ const Ausbildung = (props) => {
     window.addEventListener('scroll', (x) => {
     
         const scrollPos = window.pageYOffset;
-        console.log(scrollPos)
+
         return scrollPos
       });
 

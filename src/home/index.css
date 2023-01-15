@@ -1,10 +1,12 @@
 #page{
     padding-top: 70px;
+
 }
 
 #landing{
     height: calc(100vh - 70px);
     background-color: aliceblue;
+    background-image: url(https://images2.alphacoders.com/774/thumb-1920-774372.jpg);
 }
 
 #cv{
