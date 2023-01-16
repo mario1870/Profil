@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container, Row } from 'react-bootstrap';
 import Erst from './blog_comps';
@@ -9,6 +9,20 @@ import Erst from './blog_comps';
 
 export default function Hck_txt() {
 
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+      function handleScroll() {
+        setScrollPosition(window.pageYOffset);
+        console.log(`Current scroll position: ${scrollPosition}`);
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    });
 
   return (
     <>

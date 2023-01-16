@@ -8,12 +8,26 @@ import Interessen from "./lebenslauf/interessen"
 import Schule from "./lebenslauf/schule"
 import Ueber_mich from "./lebenslauf/ueber_mich"
 import Skills from "./skills"
+import { useState, useEffect } from "react"
 
 
 
 const Home = () => {
 
+    const [scrollPosition, setScrollPosition] = useState(0);
 
+    useEffect(() => {
+      function handleScroll() {
+        setScrollPosition(window.pageYOffset);
+        console.log(`Current scroll position: ${scrollPosition}`);
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    });
     return(
         <>
 
