@@ -11,7 +11,6 @@ import Skills from "./skills"
 import { useState, useEffect } from "react"
 
 
-
 const Home = () => {
 
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -19,10 +18,43 @@ const Home = () => {
     useEffect(() => {
       function handleScroll() {
         setScrollPosition(window.pageYOffset);
-        console.log(`Current scroll position: ${scrollPosition}`);
+
+        const school = document.getElementById("schule_comp")
+        const ausbildung = document.getElementById("ausbildung_comp")
+        
+        
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                school.style.animation = "schule 3s 1 forwards"
+                ausbildung.style.animation = "schule 3s 1 forwards"
+            }
+            else{
+                school.style.animation = "schule_reverse 3s 1 forwards"
+                ausbildung.style.animation = "schule_reverse 3s 1 forwards"
+            }
+            });
+        });
+
+        observer.observe(school);
+        observer.observe(ausbildung);
+        
+        
+
+
+        school.addEventListener("animationend", function(){
+            school.style.left = "300px";
+        });
+        
+
+
+
+   
+
       }
   
       window.addEventListener('scroll', handleScroll);
+
   
       return () => {
         window.removeEventListener('scroll', handleScroll);
@@ -47,11 +79,16 @@ const Home = () => {
             <div id="cv">
 
                 <div id="ausbildung">
-                    <Ausbildung text="Ausbildung" />
+                    <div id="ausbildung_comp">
+                        <Ausbildung text="Ausbildung" />
+                    </div>
+                    
                 </div>
 
                 <div  id="schule">
-                    <Schule text="Schule" />
+                    <div id="schule_comp">
+                        <Schule text="Schule" />
+                    </div>
                 </div>
 
                 <div id="ueber_mich">

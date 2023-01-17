@@ -10,14 +10,47 @@ import Erst from './blog_comps';
 export default function Hck_txt() {
 
     const [scrollPosition, setScrollPosition] = useState(0);
-
     useEffect(() => {
       function handleScroll() {
         setScrollPosition(window.pageYOffset);
-        console.log(`Current scroll position: ${scrollPosition}`);
+
+        const school = document.getElementById("thema1")
+        console.log(school)
+
+        
+        
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                school.style.animation = "schule 3s 1 forwards"
+
+            }
+            else{
+                school.style.animation = "schule_reverse 3s 1 forwards"
+
+            }
+            });
+        });
+
+        observer.observe(school);
+
+        
+        
+
+
+        school.addEventListener("animationend", function(){
+            school.style.left = "300px";
+        });
+        
+
+
+
+   
+
       }
   
       window.addEventListener('scroll', handleScroll);
+
   
       return () => {
         window.removeEventListener('scroll', handleScroll);
@@ -33,6 +66,7 @@ export default function Hck_txt() {
         <Container style={{marginTop: "0px", zIndex: "3"}} >
 
             <Row>
+                
                 <Erst id="thema1" col="4" ueberschrift= "Recon-ng" text1="Recon-ng ist ein Programm, welches webbasierte Open-Source-Aufklärung möglichst schnell und gründlich durchführt." img_src="https://inesmartins.github.io/content/images/size/w2000/2020/06/recon-ng.png" link="/blog/Ethical_Hacking/informationsgewinnung" />
                 <Erst col="8" ueberschrift= "Google-Hacking" text1="Google Hacking ist Teil der ersten Stufe eines hackingangriffs, der sogenannten Reconnaicance." img_src="https://thehackernews.com/images/-t0syJYrfZA4/Xd5M5DAou8I/AAAAAAAA13A/GM5c_TEqqmkDAiqdmvNCcInVJ_-q1TEwgCLcBGAsYHQ/s728-rj-e365/google-hacking.png" />
             </Row>

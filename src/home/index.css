@@ -50,3 +50,16 @@
     background-color: chartreuse;
     
 }
+
+
+
+@keyframes schule {
+    from {margin-left: 0px;}
+    to {margin-left: 200px;}
+  }
+  
+  @keyframes schule_reverse {
+    from {margin-left: 200px;}
+    to {margin-left: 0px;}
+  }
+  
